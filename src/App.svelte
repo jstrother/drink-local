@@ -1,8 +1,8 @@
 <script>
   import Tailwind from './Tailwind.svelte';
-  import Header from './components/Header.svelte';
-  import Main from './components/Main.svelte';
-  import Footer from './components/Footer.svelte';
+  import Header from './components/Layout/Header.svelte';
+  import Main from './components/Layout/Main.svelte';
+  import Footer from './components/Layout/Footer.svelte';
 </script>
 
 <Tailwind />
