@@ -6,8 +6,8 @@ module.exports = {
   },
   plugins: [
     ['@snowpack/plugin-svelte'],
-    ['@snowpack/plugin-typescript'],
-    ['@snowpack/plugin-webpack']
+    ['@snowpack/plugin-webpack'],
+    ['@snowpack/plugin-dotenv']
   ],
   packageOptions: {
     "packageLookupFields": ["svelte", "module", "main"]
