@@ -1,6 +1,6 @@
 <script>
   import Brewery from '../Beer/Brewery.svelte';
-  import { city, breweryList } from '../../Stores/store';
+  import { city, breweryList } from '../../Stores/breweryStore';
 </script>
 
 <h3 class="place-self-center">Brewery List</h3>

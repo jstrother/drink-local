@@ -27,6 +27,7 @@
     "snowpack": "^3.0.11",
     "svelte": "^3.31.2",
     "svelte-check": "^1.1.28",
+    "svelte-google-maps-embed": "^0.1.1",
     "svelte-jester": "^1.3.0",
     "svelte-preprocess": "^4.6.1"
   },

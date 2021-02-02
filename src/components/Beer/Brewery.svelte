@@ -1,25 +1,28 @@
 <script>
-  import { breweryDirections } from '../../Stores/store';
+  import { showMap, brewCity, brewState, brewStreet } from '../../Stores/directionStore';
   export let brewery;
 
   const { name, street, city, state, website_url } = brewery;
-</script>
 
-<style>
-  a {
-    text-decoration: underline;
+  brewCity.set(city);
+  brewState.set(state);
+  brewStreet.set(street);
+
+  function show() {
+    showMap.set(true);
   }
-</style>
+</script>
 
 <div class="flex flex-col border-2 m-1.5 p-1.5 max-w-sm">
   <h3>{name}</h3>
   <p>{street}</p>
   <p>{city}, {state}</p>
-  <div class="flex flex-row justify-between place-self-end">
+  <div class="flex flex-col max-w-full">
+    <br/>
     {#if website_url}
-      <a href={website_url} target="_blank">Website</a>
+      <a class="place-self-center underline" href={website_url} target="_blank">Website</a>
+      <br/>
     {/if}
-    {console.log(breweryDirections(street, city, state))}
-    <a href={breweryDirections(street, city, state)} target="_blank">Directions</a>
+    <p class="place-self-center cursor-pointer" on:click="{show}">Click for Directions</p>
   </div>  
 </div>

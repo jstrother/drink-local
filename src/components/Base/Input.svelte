@@ -1,5 +1,5 @@
 <script>
-  import { city } from '../../Stores/store';
+  import { city } from '../../Stores/breweryStore';
 </script>
 
 <div class="flex flex-col place-self-center">
