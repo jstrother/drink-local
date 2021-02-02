@@ -1,6 +1,7 @@
 <script>
+  import { fade } from 'svelte/transition';
   import BreweryList from '../Beer/BreweryList.svelte';
-  import BreweryDirections from '../Beer/BreweryDirections.svelte';
+  import BreweryMap from '../Beer/BreweryMap.svelte';
   import Input from '../Base/Input.svelte';
   import { showMap } from '../../Stores/directionStore';
 </script>
@@ -9,8 +10,12 @@
   <Input />
   <br />
   {#if $showMap}
-    <BreweryDirections />
+    <div class="flex flex-col" transition:fade>
+      <BreweryMap />
+    </div>
   {/if}
   <br />
-  <BreweryList />
+  {#if !$showMap}
+    <BreweryList />
+  {/if}
 </main>

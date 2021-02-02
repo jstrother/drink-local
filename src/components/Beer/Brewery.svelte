@@ -1,12 +1,10 @@
 <script>
-  import { showMap, brewCity, brewState, brewStreet } from '../../Stores/directionStore';
+  import { showMap, brewLocation } from '../../Stores/directionStore';
   export let brewery;
 
   const { name, street, city, state, website_url } = brewery;
 
-  brewCity.set(city);
-  brewState.set(state);
-  brewStreet.set(street);
+  const location = `${street.replace(' ', '+')}+${city}+${state}`;
 
   function show() {
     showMap.set(true);
@@ -23,6 +21,6 @@
       <a class="place-self-center underline" href={website_url} target="_blank">Website</a>
       <br/>
     {/if}
-    <p class="place-self-center cursor-pointer" on:click="{show}">Click for Directions</p>
+    <p class="place-self-center cursor-pointer" on:click="{show}" on:click="{brewLocation.set(location)}">Click for Map</p>
   </div>  
 </div>
