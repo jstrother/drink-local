@@ -1,8 +1,8 @@
 import { writable } from 'svelte/store';
 
-export let city = writable('Seattle');
+export let city = writable('');
 
-export const breweryList = async (location) => {
+export const getBreweryList = async (location) => {
   return await fetch(
     `https://api.openbrewerydb.org/breweries?page=${page()}&per_page=7&sort=+name&by_city=${
       location.replace(' ', '_').toLowerCase()
@@ -16,4 +16,3 @@ export const breweryList = async (location) => {
 };
 
 const page = () => Math.floor(Math.random() * 10);
-

@@ -4,10 +4,23 @@
 
   const { name, street, city, state, website_url } = brewery;
 
-  const location = `${street.replace(' ', '+')}+${city}+${state}`;
+  const location = `${replaceSpaces(street)},${replaceSpaces(city)},${replaceSpaces(state)}`;
+
+  function setBrewLocation() {
+    brewLocation.set(location);
+  }
 
   function show() {
     showMap.set(true);
+  }
+
+  function clickFunction() {
+    setBrewLocation();
+    show();
+  }
+
+  function replaceSpaces(str) {
+    return str.replaceAll(' ', '+');
   }
 </script>
 
@@ -21,6 +34,6 @@
       <a class="place-self-center underline" href={website_url} target="_blank">Website</a>
       <br/>
     {/if}
-    <p class="place-self-center cursor-pointer" on:click="{show}" on:click="{brewLocation.set(location)}">Click for Map</p>
+    <p class="place-self-center cursor-pointer" on:click={clickFunction}>Click for Map</p>
   </div>  
 </div>

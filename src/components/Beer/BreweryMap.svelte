@@ -1,7 +1,7 @@
 <script>
-  import { showMap, brewLocation, apiKey } from '../../Stores/directionStore';
+  import { showMap, brewLocation, userCoords, apiKey } from '../../Stores/directionStore';
   
-  const src = `https://www.google.com/maps/embed/v1/place?key=${$apiKey}&q=${$brewLocation}`;
+  const src = `https://www.google.com/maps/embed/v1/directions?key=${$apiKey}&origin=${$userCoords}&destination=${$brewLocation}&center=${$userCoords}&zoom=12`;
 
   const dimension = 400;
 
