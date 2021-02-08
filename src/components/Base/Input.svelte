@@ -1,6 +1,6 @@
 <script>
   import { city } from '../../Stores/breweryStore';
-  import { postalCode } from '../../Stores/directionStore';
+  import { postalCode } from '../../Stores/store';
 </script>
 
 {#if $postalCode}

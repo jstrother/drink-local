@@ -1,5 +1,5 @@
 <script>
-  import { showMap, brewLocation } from '../../Stores/directionStore';
+  import { showMap, brewLocation } from '../../Stores/store';
   export let brewery;
 
   const { name, street, city, state, website_url } = brewery;
