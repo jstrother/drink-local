@@ -1,6 +1,6 @@
 <script>
   import Brewery from "../Beer/Brewery.svelte";
-  import { apiKey, userCoords, breweryList } from '../../Stores/store';
+  import { apiKey, userCoords, wantToFindBeer } from '../../Stores/store';
   
   const getCity = async () => {
     return await fetch(
@@ -27,6 +27,10 @@
         throw new Error(err)
       });
   };
+
+  function reset() {
+    wantToFindBeer.set(false);
+  }
 </script>
 
 <h3 class="place-self-center">Brewery List</h3>
@@ -41,5 +45,6 @@
     {/each}
   {:catch}
     <p>Sorry, something happened. Please try again.</p>
+    <p class="cursor-pointer place-self-center border-gray-300 rounded-md border-2 p-2" on:click={reset}>Reset</p>
   {/await}
 </div>
