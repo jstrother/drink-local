@@ -45,6 +45,6 @@
     {/each}
   {:catch}
     <p>Sorry, something happened. Please try again.</p>
-    <p class="cursor-pointer place-self-center border-gray-300 rounded-md border-2 p-2" on:click={reset}>Reset</p>
+    <p class="cursor-pointer border-gray-300 rounded-md border-2 p-2" on:click={reset}>Reset</p>
   {/await}
 </div>
