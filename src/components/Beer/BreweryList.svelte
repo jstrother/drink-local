@@ -44,7 +44,9 @@
       {/if}
     {/each}
   {:catch}
-    <p>Sorry, something happened. Please try again.</p>
-    <p class="cursor-pointer border-gray-300 rounded-md border-2 p-2" on:click={reset}>Reset</p>
+    <div class="flex flex-col place-self-center">
+      <p>Sorry, something happened. Please try again.</p>
+      <p class="cursor-pointer border-gray-300 rounded-md border-2 p-2" on:click={reset}>Reset</p>
+    </div>
   {/await}
 </div>
