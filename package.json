@@ -9,7 +9,7 @@
     "test:watch": "jest --watchAll",
     "check": "svelte-check --diagnostic-sources \"js,svelte\"",
     "check:watch": "svelte-check --watch --diagnostic-sources \"js,svelte\"",
-    "build": "npm test && npm run check && snowpack build",
+    "build": "npm run check && snowpack build",
     "start": "sirv build --maxage 36000"
   },
   "author": "Sean Mullen",
