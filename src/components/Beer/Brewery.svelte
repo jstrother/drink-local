@@ -24,7 +24,7 @@
   }
 </script>
 
-<div class="flex flex-col border-2 m-1.5 p-1.5 max-w-sm">
+<div class="flex flex-col border-2 m-1.5 p-1.5 max-w-sm rounded-lg bg-gray-100">
   <h3>{name}</h3>
   <p>{street}</p>
   <p>{city}, {state}</p>
